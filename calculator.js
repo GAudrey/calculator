@@ -1,4 +1,4 @@
-const buttons = [
+const buttonsArr = [
     ['(', ')', '%', 'AC'],
     ['7', '8', '9', '/'],
     ['4', '5', '6', 'X'],
@@ -7,12 +7,12 @@ const buttons = [
 ];
 
 // calculator
-    // inside body
-    const body = document.querySelector('body');
 
     // main
     const newMain = document.createElement('main');
     newMain.className = 'container';
+    
+    document.body.appendChild(newMain);
 
     // div columns & card (calculator)
     const divColumns = document.createElement('div');
@@ -20,6 +20,9 @@ const buttons = [
 
     const divCard = document.createElement('div');
     divCard.className = 'card column is-one-fifth';
+
+    newMain.appendChild(divColumns);
+    divColumns.appendChild(divCard);
 
     // input
     const sectionInput = document.createElement('section');
@@ -31,23 +34,28 @@ const buttons = [
     inputArea.value = '0';
     inputArea.readOnly = true;
 
-    // buttons
+    divCard.appendChild(sectionInput);
+    sectionInput.appendChild(inputArea);
+
+    // section buttons
     const sectionButtons = document.createElement('section');
     sectionButtons.className = 'is-centered';
-        // div
-        for (){
 
+    divCard.appendChild(sectionButtons);
+        
+        // div buttons
+        for (let i = 0; i < buttonsArr.length; i ++){
+            const divButtons = document.createElement('div');
+            divButtons.className = 'p-1';
+
+            sectionButtons.appendChild(divButtons);
+
+            // buttons
+            for (let ib = 0; ib < buttonsArr[i].length; ib ++){
+                const button = document.createElement('button');
+                button.className = 'button';
+                button.textContent = buttonsArr[i][ib];
+
+                divButtons.appendChild(button);
+            };
     };
-    
-
-    // arborescence
-        // main
-        body.appendChild(newMain);
-        // calculator
-        newMain.appendChild(divColumns);
-        divColumns.appendChild(divCard);
-        // input
-        divCard.appendChild(sectionInput);
-        sectionInput.appendChild(inputArea);
-        // buttons
-        divCard.appendChild(sectionButtons);
