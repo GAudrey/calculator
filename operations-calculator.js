@@ -1,3 +1,5 @@
+/* éviter la répétition en suivant du même opérateur et de la virgule, vider l'input après avoir eu la solution*/
+
 function safeEval(str){
     return Function('return ' + str)()
 }
