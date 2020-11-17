@@ -1,61 +1,31 @@
-const buttonsArr = [
-    ['(', ')', '%', 'AC'],
-    ['7', '8', '9', '/'],
-    ['4', '5', '6', 'X'],
-    ['1', '2', '3', '-'],
-    ['0', '.', '=', '+'],
-];
+const buttonsArr = ['(', ')', '%', 'AC', '7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '.', '=', '+'];
 
 // calculator
 
     // main
     const newMain = document.createElement('main');
-    newMain.className = 'container';
+    newMain.className = 'grid';
     
     document.body.appendChild(newMain);
 
-    // div columns & card (calculator)
-    const divColumns = document.createElement('div');
-    divColumns.className = 'section columns is-centered';
-
-    const divCard = document.createElement('div');
-    divCard.className = 'card column is-one-fifth';
-
-    newMain.appendChild(divColumns);
-    divColumns.appendChild(divCard);
-
     // input
-    const sectionInput = document.createElement('section');
-    sectionInput.className = 'control';
+    const divInput = document.createElement('div');
+    divInput.className = 'input-zone';
 
-    const inputArea = document.createElement('input');
-    inputArea.className = 'input has-text-right';
-    inputArea.type = 'text';
-    inputArea.value = '0';
-    inputArea.readOnly = true;
+    const newInput = document.createElement('input');
+    newInput.className = 'input-screen';
+    newInput.type = 'text';
+    newInput.value = '0';
+    newInput.readOnly = true;
 
-    divCard.appendChild(sectionInput);
-    sectionInput.appendChild(inputArea);
+    newMain.appendChild(divInput);
+    divInput.appendChild(newInput);
 
-    // section buttons
-    const sectionButtons = document.createElement('section');
-    sectionButtons.className = 'is-centered';
+    // buttons
+    for (let i = 0; i < buttonsArr.length; i ++){
+        const buttons = document.createElement('button');
+        buttons.className = 'btn';
+        buttons.textContent = buttonsArr[i];
 
-    divCard.appendChild(sectionButtons);
-        
-        // div buttons
-        for (let i = 0; i < buttonsArr.length; i ++){
-            const divButtons = document.createElement('div');
-            divButtons.className = 'p-1';
-
-            sectionButtons.appendChild(divButtons);
-
-            // buttons
-            for (let ib = 0; ib < buttonsArr[i].length; ib ++){
-                const button = document.createElement('button');
-                button.className = 'button';
-                button.textContent = buttonsArr[i][ib];
-
-                divButtons.appendChild(button);
-            };
+        newMain.appendChild(buttons);
     };
