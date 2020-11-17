@@ -28,7 +28,7 @@ for (let content of contentButton){
 
         // result
         else {
-            contentInput.value = safeEval(contentInput.value)
+            contentInput.value = safeEval(contentInput.value);
         }
     })
 }

@@ -1,3 +1,4 @@
+// array buttons content
 const buttonsArr = ['(', ')', '%', 'AC', '7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '.', '=', '+'];
 
 // calculator
@@ -28,4 +29,4 @@ const buttonsArr = ['(', ')', '%', 'AC', '7', '8', '9', '/', '4', '5', '6', '*',
         buttons.textContent = buttonsArr[i];
 
         newMain.appendChild(buttons);
-    };
+    }

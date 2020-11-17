@@ -3,10 +3,10 @@ body {
 }
 
 .grid {
-    width: 250px;
+    width: 200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 50px);
+    grid-template-columns: repeat(4, 40px);
     grid-template-rows: minmax(50px, auto) repeat(5, 30px);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -24,7 +24,7 @@ body {
 }
 
 .input-screen {
-    width: 218px;
+    width: 178px;
     height: 40px;
     background-color: snow;
     border: 1px solid grey;
