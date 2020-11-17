@@ -15,7 +15,7 @@ const buttonsArr = ['(', ')', '%', 'AC', '7', '8', '9', '/', '4', '5', '6', '*',
     const newInput = document.createElement('input');
     newInput.className = 'input-screen';
     newInput.type = 'text';
-    newInput.value = '0';
+    newInput.value = '';
     newInput.readOnly = true;
 
     newMain.appendChild(divInput);

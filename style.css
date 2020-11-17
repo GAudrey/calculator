@@ -14,10 +14,11 @@ body {
     align-content: center;
     padding: 20px 10px 40px 10px;
     border: 3px solid tan;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: dimgrey;
 }
 
+/* input */
 .input-zone {
     grid-column: 1 /  span 4;
 }
@@ -31,19 +32,14 @@ body {
     padding: 0px 10px 0px 0px;
     text-align: right;
     font-size: 15px;
-    color: lightgrey;
 }
 
-.input-screen:hover {
-    color: black;
-}
-
-.input-screen:focus{
+.input-screen:hover, .input-screen:focus{
     outline: none;
-    color: black;
     box-shadow: 0 0 10px 5px #464646;
 }
 
+/* buttons classic*/
 .btn {
     outline: none;
     border: 1px solid grey;
@@ -58,20 +54,20 @@ body {
     box-shadow: inset 0 0 5px black;
 }
 
-/* buttons up and right */
-.btn:nth-child(2),
-.btn:nth-child(3),
-.btn:nth-child(4),
-.btn:nth-child(5),
-.btn:nth-child(9),
-.btn:nth-child(13),
-.btn:nth-child(17),
-.btn:nth-child(21) {
-    background-color: #464646;
-    color: white;
-}
+    /* buttons up and right */
+    .btn:nth-child(2),
+    .btn:nth-child(3),
+    .btn:nth-child(4),
+    .btn:nth-child(5),
+    .btn:nth-child(9),
+    .btn:nth-child(13),
+    .btn:nth-child(17),
+    .btn:nth-child(21) {
+        background-color: #464646;
+        color: white;
+    }
 
-/* button = */
-.btn:nth-child(20) {
-    background-color: tan;
-}
+    /* button = */
+    .btn:nth-child(20) {
+        background-color: tan;
+    }
