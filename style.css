@@ -23,34 +23,38 @@ body {
     grid-column: 1 /  span 4;
 }
 
-.input-screen-hist {
-    width: 178px;
-    height: 25px;
-    background-color: snow;
-    border: 1px solid snow;
-    border-radius: 10px 10px 0px 0px;
-    padding: 0px 10px 0px 0px;
-    text-align: right;
-    font-size: 15px;
-}
-.input-screen {
-    width: 178px;
-    height: 40px;
-    background-color: snow;
-    border: 1px solid snow;
-    border-radius: 0px 0px 10px 10px;
-    padding: 0px 10px 0px 0px;
-    text-align: right;
-    font-size: 15px;
-}
+    /* last entry*/
+    .input-screen-hist {
+        width: 178px;
+        height: 25px;
+        background-color: snow;
+        border: 1px solid snow;
+        border-radius: 10px 10px 0px 0px;
+        padding: 0px 10px 0px 0px;
+        text-align: right;
+        font-size: 13px;
+        color: grey;
+    }
 
-.input-screen-hist:hover, .input-screen-hist:focus{
-    outline: none;
-}
+    .input-screen:hover, .input-screen:focus{
+        outline: none;
+    }
 
-.input-screen:hover, .input-screen:focus{
-    outline: none;
-}
+    /* current entry */
+    .input-screen {
+        width: 178px;
+        height: 40px;
+        background-color: snow;
+        border: 1px solid snow;
+        border-radius: 0px 0px 10px 10px;
+        padding: 0px 10px 0px 0px;
+        text-align: right;
+        font-size: 15px;
+    }
+
+    .input-screen-hist:hover, .input-screen-hist:focus{
+        outline: none;
+    }
 
 /* buttons classic*/
 .btn {

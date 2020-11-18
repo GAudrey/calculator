@@ -2,7 +2,7 @@ function safeEval(str){
     return Function('return ' + str)()
 }
 
-const contentButton = document.querySelectorAll('button'); // all buttons
+const contentButton = document.querySelectorAll('button');
 const contentInput = document.querySelector('.input-screen');
 const contentHist = document.querySelector('.input-screen-hist');
 
@@ -22,7 +22,7 @@ for (let content of contentButton){
             }
         }
         
-        // reset to 0
+        // clear input result
         else if(content.textContent == 'AC'){
             contentInput.value = '';
             for(let i = 0 ; i < contentButton.length ; i ++){
@@ -32,16 +32,16 @@ for (let content of contentButton){
 
         // result
         else{
-            // add result in another input
+            // calculation and result display
             contentHist.value = contentInput.value + '=' + safeEval(contentInput.value);
-            // clean input result
+            // result display
             contentInput.value = safeEval(contentInput.value);
             // loop to disable buttons
             for(let i = 0 ; i < contentButton.length ; i ++){
                 if(contentButton[i].textContent !== 'AC'){
                     contentButton[i].disabled = true;
                 }
-                else if(contentButton[i].textContent == 'AC'){
+                else{
                     contentButton[i].disabled = false;
                 }
             }
