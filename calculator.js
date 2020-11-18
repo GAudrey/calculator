@@ -26,8 +26,6 @@ const buttonsArr = ['(', ')', '%', 'AC', '7', '8', '9', '/', '4', '5', '6', '*',
     for (let i = 0; i < buttonsArr.length; i ++){
         const buttons = document.createElement('button');
         buttons.className = 'btn';
-        buttons.disabled = false;
-        buttons.value = buttonsArr[i];
         buttons.textContent = buttonsArr[i];
 
         newMain.appendChild(buttons);
