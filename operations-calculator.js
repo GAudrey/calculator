@@ -4,7 +4,7 @@ function safeEval(str){
     return Function('return ' + str)()
 }
 
-const contentButton = document.querySelectorAll('button');
+const contentButton = document.getElementsByClassName('btn');
 const contentInput = document.querySelector('input');
 
 for (let content of contentButton){
@@ -14,7 +14,7 @@ for (let content of contentButton){
         if(content.textContent !== 'AC' && content.textContent != '='){
             // percent of
             if(content.textContent == '%'){
-                contentInput.value = (contentInput.value)/100;
+                contentInput.value = safeEval(contentInput.value)/100;
             }
 
             // add each button content but not % and =
@@ -26,11 +26,21 @@ for (let content of contentButton){
         // reset to 0
         else if(content.textContent == 'AC'){
             contentInput.value = '';
+            content.disabled = false;
         }
 
         // result
-        else {
+        else{
             contentInput.value = safeEval(contentInput.value);
+            console.log('result')
+                if(content.textContent !== 'AC'){
+                    content.disabled = true;
+                    console.log('disabled true')
+                }
+                else{
+                    content.disabled = false;
+                    console.log('disabled false')
+                }
         }
     })
 }
