@@ -13,13 +13,22 @@ const buttonsArr = ['(', ')', '%', 'AC', '7', '8', '9', '/', '4', '5', '6', '*',
     const divInput = document.createElement('div');
     divInput.className = 'input-zone';
 
+    newMain.appendChild(divInput);
+
+    const histInput = document.createElement('input');
+    histInput.className = 'input-screen-hist';
+    histInput.type = 'text';
+    histInput.value = '';
+    histInput.readOnly = true;
+
+    divInput.appendChild(histInput);
+
     const newInput = document.createElement('input');
     newInput.className = 'input-screen';
     newInput.type = 'text';
     newInput.value = '';
     newInput.readOnly = true;
 
-    newMain.appendChild(divInput);
     divInput.appendChild(newInput);
 
     // buttons

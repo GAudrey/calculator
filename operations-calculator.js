@@ -1,11 +1,10 @@
-/* éviter la répétition en suivant du même opérateur et de la virgule, vider l'input après avoir eu la solution*/
-
 function safeEval(str){
     return Function('return ' + str)()
 }
 
 const contentButton = document.querySelectorAll('button'); // all buttons
-const contentInput = document.querySelector('input');
+const contentInput = document.querySelector('.input-screen');
+const contentHist = document.querySelector('.input-screen-hist');
 
 for (let content of contentButton){
     content.addEventListener('click', () => {
@@ -33,6 +32,9 @@ for (let content of contentButton){
 
         // result
         else{
+            // add result in another input
+            contentHist.value = contentInput.value + '=' + safeEval(contentInput.value);
+            // clean input result
             contentInput.value = safeEval(contentInput.value);
             // loop to disable buttons
             for(let i = 0 ; i < contentButton.length ; i ++){
