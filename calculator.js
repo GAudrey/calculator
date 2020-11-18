@@ -17,6 +17,7 @@ const buttonsArr = ['(', ')', '%', 'AC', '7', '8', '9', '/', '4', '5', '6', '*',
 
     const histInput = document.createElement('input');
     histInput.className = 'input-screen-hist';
+    histInput.alt= 'calculator history';
     histInput.type = 'text';
     histInput.value = '';
     histInput.readOnly = true;
@@ -25,6 +26,7 @@ const buttonsArr = ['(', ')', '%', 'AC', '7', '8', '9', '/', '4', '5', '6', '*',
 
     const newInput = document.createElement('input');
     newInput.className = 'input-screen';
+    newInput.alt= 'calculator operations';
     newInput.type = 'text';
     newInput.value = '';
     newInput.readOnly = true;
