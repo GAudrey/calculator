@@ -3,7 +3,7 @@
 
 [Calculator](https://gaudrey.github.io/calculator/)
 
-![illu-calculator](./favicon/favicon-calculator.png)
+![illu-calculator](./readme/illu-calculator.png)
 
 ## Project infos
 
