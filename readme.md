@@ -1,6 +1,4 @@
 # Calculator
-## Github page
-
 [Calculator](https://gaudrey.github.io/calculator/)
 
 ![illu-calculator](./readme/illu-calculator.png)
